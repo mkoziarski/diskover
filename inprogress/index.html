@@ -10,12 +10,27 @@
 </head>
 
 <body>
+<div id="diskover">
 <h1>Diskover.io</h1>
 <form action="#" method="post">
-    <input type="search" placeholder="Search artist, genre, style…">
+    <input type="search" id="searchInput" placeholder="Search artist, genre, style…">
     <input type="submit" class="btn search-submit" value="Search">
 </form>
 <a href="#">About</a>
+</div>
+
+<script src="json2.js"></script>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="underscore.js"></script>
+<script src="backbone.js"></script>
+<script src="diskover.js"></script>
+
+<script type="text/template" id="relItemTemplate">
+  <a href="#">
+    <h3><%- title %></h3>
+  </a>
+</script>
+
 </body>
 </html>
 
