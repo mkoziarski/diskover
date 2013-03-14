@@ -71,7 +71,7 @@ input {
 font-family: proxima nova,helvetica neue;
 }
 
-form {
+#searchBox {
 width: 100%;
 }
 

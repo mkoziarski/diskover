@@ -5,11 +5,19 @@ $(function() {
   });
   
   var ReleaseList = Backbone.Collection.extend({
-    model: Release
+    model: Release,
+    
+    initialize: function(models, options) {
+      this.query = options.query;
+    },
+    
+    url: function() {
+      return "http://api.discowgs.com/database/search?q=" + this.query;
+    }
   });
   
   var ReleaseView = Backbone.View.extend({
-    tagName = "li",
+    tagName: "li",
     
     template: _.template($("#relItemTemplate").html()),
     
@@ -32,7 +40,11 @@ $(function() {
     
     searchOnEnter: function(e) {
       if (e.keyCode != 13) return;
-      if (!this.titleInput.val()) return;
+      if (!this.searchInput.val()) return;
+      
+      var query = this.searchInput.val();
+      var results = new ReleaseList([], { query: query });
+      results.fetch();
     },
   });
   
