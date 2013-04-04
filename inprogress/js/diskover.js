@@ -44,7 +44,10 @@ $(function() {
       
       var query = this.searchInput.val();
       var results = new ReleaseList([], { query: query });
-      results.fetch();
+      results.fetch({dataType: "jsonp", cache: true, beforeSend: function(jqXHR, settings) {
+        // check user agent header
+        var header = "";
+      }});
     },
   });
   
