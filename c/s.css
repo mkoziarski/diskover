@@ -1,0 +1,273 @@
+body, div, ul, ol, li, h1, form, input, p { 
+padding:0;
+margin:0}
+
+img {border:0}
+
+ol, ul, li {list-style:none}
+
+em, strong {
+font-weight:normal;
+font-style:normal;
+text-shadow: none}
+
+h1 {
+font-size:100%;
+font-weight:400;
+font-style: normal}
+
+h1 a {
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+
+
+article, aside, footer, header, nav, section {
+display: block}
+
+button,
+input {line-height: normal}
+
+button,
+html input[type="button"],
+input[type="submit"] {
+-webkit-appearance: button; 
+cursor: pointer}
+
+.home,
+.home body {
+height: 100%;
+width: 100%;
+display: -webkit-box;
+-webkit-box-orient: horizontal;
+-webkit-box-pack: center;
+-webkit-box-align: center;
+
+display: -moz-box;
+-moz-box-orient: horizontal;
+-moz-box-pack: center;
+-moz-box-align: center;
+
+display: box;
+box-orient: horizontal;
+box-pack: center;
+box-align: center;	
+
+}
+
+body {
+background: #fafafa;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+}
+
+body,
+input {
+font-family: proxima nova,helvetica neue,sans serif;
+}
+
+#searchBox {
+width: 100%;
+}
+
+
+
+input[type="submit"] {
+xopacity: 0;
+display: none;
+}
+
+input[type=search] {
+width: 100%;
+
+-webkit-appearance: none;
+border-radius: 0;
+border: 1px solid #ccc;
+
+background: #fafafa;
+background: #fff;
+border-right: 0;
+border-left: 0;
+
+
+
+outline: none;
+xoutline: 4px solid rgba(0,0,0,.1);
+color: #333;
+xbackground-color: #fff;
+
+xborder: 1px solid #ccc;
+
+box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+transition: all 0.15s ease-in;
+-webkit-transition: all 0.15s ease-in 0;
+vertical-align: middle;
+
+
+}
+
+input:focus {
+outline:0;
+border-color:#43e4f3;
+-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 6px #43e4f3;
+-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 6px #43e4f3;
+box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 6px #43e4f3;
+-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 6px #43e4f3;
+-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 6px #43e4f3;
+box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 6px #43e4f3;
+color:#5b5b5b;
+}
+
+::-webkit-input-placeholder {
+color: #333;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+color: #333; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+color: #333; 
+}
+
+:-ms-input-placeholder {  
+color: #333;
+}
+
+h1 {
+position: absolute;
+top: 12px;
+left: 12px;
+font-size: 16px;
+color: #333;
+}
+
+.home a {
+position: absolute;
+right: 12px;
+bottom: 12px;
+color: #333;
+text-decoration: none;
+}
+
+input[type=search] {
+height: 40px;
+font-size: 16px;
+}
+
+ol.slats li {
+	
+	
+	border-bottom: 1px solid #eee;
+	}
+ol.slats li:last-child {
+	xmargin: 0;
+	xpadding: 0;
+	border-bottom: none;
+	}
+ol.slats li a h3 {
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 25px;
+	margin: 0 0 5px;
+	}
+ol.slats li a img {
+	float: left;
+	margin: 0 20px;
+	background: #fff;
+	border: 0;
+	height: 60px;
+	width: 60px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	
+	}
+	ol.slats li a {
+		padding: 25px 0;
+		display: block;
+		transition: all 0.15s ease-in;
+		-webkit-transition: all 0.15s ease-in 0;
+	
+	}
+ol.slats li a:hover {
+	background: #fff;
+}
+ol.slats li a:hover img {
+	background: #eee;
+	}
+ol.slats li a p {
+	margin: 20px 0 0 20px;
+	font-size: 16px;
+	line-height: 25px;
+	color: #555;
+	}
+ol.slats li a p span.meta {
+	display: block;
+	font-size: 13px;
+	color: #999;
+	}
+
+.results input[type=search] {
+	
+	padding-left: 110px;
+}
+@media screen and (min-width: 600px) {
+
+ol.slats li a {
+	padding: 50px 0;
+}
+
+ol.slats li a img {
+	margin-left: 30px;
+}
+
+ol.slats li a p {
+	margin: 0 0 0 120px;
+}
+
+input[type=search] {
+height: 120px;
+font-size: 42px;
+padding: 0 20px;
+}
+
+.results input[type=search] {
+	height: 60px;
+	font-size: 16px;
+	padding-left: 110px;
+}
+h1 {
+top: 22px;
+left: 22px;
+}
+.home a {
+right: 22px;
+bottom: 22px;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (min-width: 1382px) {
+
+input[type=search] {
+height: 160px;
+font-size: 67px;
+}
+
+}
