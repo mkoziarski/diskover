@@ -13,7 +13,26 @@
       <div id="searchBox">
         <input type="search" id="searchInput" placeholder="Artist, genre, style…" disabled>
       </div>
-      <a href="#">About</a>
+      <a id="aboutLabel" href="#">About</a>
+      <div id="about">
+        <a id="aboutClose" href="#" style="float: left">×</a>
+        <span>contact:<br><a href="mailto:contact@diskover.io">contact@diskover.io</a></span>
+        <br><br>
+        <span>About</span>
+      </div>
     </div>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+      $("#aboutLabel").click(function(event) {
+        $("#about").show();
+        event.stopPropagation();
+      });
+      $("#about").click(function(event) {
+        event.stopPropagation();
+      });
+      $("body, #aboutClose").click(function() {
+        $("#about").hide();
+      });
+    </script>
   </body>
 </html>

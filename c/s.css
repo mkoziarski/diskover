@@ -157,6 +157,24 @@ color: #333;
 text-decoration: none;
 }
 
+#about {
+display: none;
+position: absolute;
+right: 8px;
+bottom: 8px;
+padding: 3px;
+background: #fff;
+border: 1px solid #ccc;
+color: #333;
+text-align: right;
+}
+
+#about a {
+position: relative;
+right: 0;
+bottom: 0;
+}
+
 input[type=search] {
 height: 40px;
 font-size: 16px;
@@ -251,6 +269,11 @@ left: 22px;
 .home a {
 right: 22px;
 bottom: 22px;
+}
+
+#about {
+right: 18px;
+bottom: 18px;
 }
 
 }
