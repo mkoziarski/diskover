@@ -12,7 +12,7 @@ $(function() {
     },
     
     url: function() {
-      return "http://api.discowgs.com/database/search?q=" + this.query;
+      return "http://api.discogs.com/database/search?q=" + this.query;
     }
   });
   
@@ -44,10 +44,7 @@ $(function() {
       
       var query = this.searchInput.val();
       var results = new ReleaseList([], { query: query });
-      results.fetch({dataType: "jsonp", cache: true, beforeSend: function(jqXHR, settings) {
-        // check user agent header
-        var header = "";
-      }});
+      results.fetch({dataType: "jsonp", cache: true});
     },
   });
   
