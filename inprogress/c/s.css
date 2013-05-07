@@ -71,6 +71,12 @@ input {
 font-family: proxima nova,helvetica neue;
 }
 
+#diskover {
+-moz-box-flex: 1;
+-webkit-box-flex: 1;
+box-flex: 1;
+}
+
 #searchBox {
 width: 100%;
 }
