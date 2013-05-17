@@ -34,7 +34,14 @@ $(function() {
   var ReleaseListView = Backbone.View.extend({
     tagName: "ol",
     
+    className: "slats",
+    
     render: function() {
+      this.forEach(function(item, this) {
+        var itemView = new ReleaseView({model: item});
+        this.$el.append(itemView.render().el);
+      });
+      return this;
     }
   });
   
@@ -55,12 +62,13 @@ $(function() {
       
       var query = this.searchInput.val();
       var results = new ReleaseList([], { query: query });
-      results.on()
+      var that = this;
       results.fetch({
         dataType: "jsonp",
         cache: true,
         success: function(collection, response) {
-          console.log("search done")
+          var view = new ReleaseListView({collection: results});
+          that.$el.append(view.render().el);
         },
         error: function(collection, response) {
           console.log("search failed");
