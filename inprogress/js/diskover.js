@@ -37,10 +37,10 @@ $(function() {
     className: "slats",
     
     render: function() {
-      this.collection.forEach(function(item, this) {
+      this.collection.forEach(function(item) {
         var itemView = new ReleaseView({model: item});
         this.$el.append(itemView.render().el);
-      });
+      }, this);
       return this;
     }
   });
