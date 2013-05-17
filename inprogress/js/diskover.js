@@ -12,7 +12,9 @@ $(function() {
     },
     
     url: function() {
-      return "http://api.discogs.com/database/search?q=" + this.query;
+      return "http://api.discogs.com/database/search?q=" +
+             encodeURIComponent(this.query) +
+             "per_page=10";
     },
     
     parse: function(resp) {
