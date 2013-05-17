@@ -13,6 +13,10 @@ $(function() {
     
     url: function() {
       return "http://api.discogs.com/database/search?q=" + this.query;
+    },
+    
+    parse: function(resp) {
+      return resp.data.results;
     }
   });
   
