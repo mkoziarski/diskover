@@ -27,6 +27,13 @@ $(function() {
     }
   });
   
+  var ReleaseListView = Backbone.View.extend({
+    tagName: "ol",
+    
+    render: function() {
+    }
+  });
+  
   var AppView = Backbone.View.extend({
     el: $("#diskover"),
     
@@ -44,7 +51,18 @@ $(function() {
       
       var query = this.searchInput.val();
       var results = new ReleaseList([], { query: query });
-      results.fetch({dataType: "jsonp", cache: true});
+      results.on()
+      results.fetch({
+        dataType: "jsonp",
+        cache: true,
+        success: function(collection, response) {
+          console.log("search done")
+        },
+        error: function(collection, response) {
+          console.log("search failed");
+          console.log(response);
+        }
+      });
     },
   });
   

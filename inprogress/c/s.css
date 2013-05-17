@@ -156,11 +156,14 @@ color: #333;
 }
 
 .home a {
+color: #333;
+text-decoration: none;
+}
+
+.home a.about {
 position: absolute;
 right: 12px;
 bottom: 12px;
-color: #333;
-text-decoration: none;
 }
 
 input[type=search] {
@@ -254,7 +257,7 @@ h1 {
 top: 22px;
 left: 22px;
 }
-.home a {
+.home a.about {
 right: 22px;
 bottom: 22px;
 }
