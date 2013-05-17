@@ -37,7 +37,7 @@ $(function() {
     className: "slats",
     
     render: function() {
-      this.forEach(function(item, this) {
+      this.collection.forEach(function(item, this) {
         var itemView = new ReleaseView({model: item});
         this.$el.append(itemView.render().el);
       });
