@@ -28,7 +28,7 @@ $(function() {
     template: _.template($("#relItemTemplate").html()),
     
     render: function() {
-      this.$el.html(this.template(this.model.toJSON()));
+      this.$el.replaceWith(this.template(this.model.toJSON()));
       return this;
     }
   });
