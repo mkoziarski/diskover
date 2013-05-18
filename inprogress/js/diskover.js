@@ -70,7 +70,7 @@ $(function() {
         cache: true,
         success: function(collection, response) {
           var view = new ReleaseListView({collection: results});
-          that.$("ul").remove();
+          that.$("ol").remove();
           that.$el.append(view.render().el);
         },
         error: function(collection, response) {
