@@ -25,10 +25,12 @@ $(function() {
   var ReleaseView = Backbone.View.extend({
     tagName: "li",
     
+    className: "group",
+    
     template: _.template($("#relItemTemplate").html()),
     
     render: function() {
-      this.$el.replaceWith(this.template(this.model.toJSON()));
+      this.$el.html(this.template(this.model.toJSON()));
       return this;
     }
   });
